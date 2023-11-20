@@ -1,0 +1,72 @@
+.navContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 85px;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 5px -5px 40px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 58px;
+  height: 74px;
+}
+.navLink {
+  color: black !important;
+  font-weight: 500;
+}
+.btn {
+  border: 1px solid var(--secondColor);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 36px;
+  color: var(--secondColor);
+  font-weight: 700;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.menu {
+  color: var(--mainColor);
+}
+.sidebar {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 11;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.show {
+  left: 0;
+}
+.hide {
+  left: -300%;
+}
+.mobLogo {
+  width: 30px;
+  height: 44px;
+  object-fit: contain;
+}
+.close {
+  color: var(--mainColor);
+}
+.mobList {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.mobLink {
+  color: #3a3a3a;
+  font-weight: 700;
+}

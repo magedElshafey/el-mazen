@@ -1,0 +1,45 @@
+.mainDiv {
+  background-image: url("../../../assets/hero.png");
+  width: 100vw;
+  height: 600px;
+  background-size: cover;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+}
+.title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+}
+.desc {
+  color: #fff;
+  font-weight: 500;
+  width: 40%;
+  opacity: 0.6;
+}
+@media screen and (max-width: 992px) {
+  .desc {
+    width: 100%;
+  }
+}
+.btn {
+  color: white;
+  font-weight: 700;
+  background-color: var(--secondColor);
+  border: 2px solid var(--secondColor);
+  padding: 16px 71px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

@@ -1,13 +1,44 @@
-body {
+/* public styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+  text-transform: capitalize !important;
+  font-family: "Tajawal", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style-type: none;
+}
+/* varibales */
+:root {
+  --mainColor: #28348a;
+  --secondColor: #f8af00;
+}
+/* utility classes */
+.globe {
+  color: var(--secondColor) !important;
+}
+.dropmenu {
+  border: none !important;
+  background-color: transparent !important;
+}
+/* App.css */
+.dropmenu::after {
+  display: none;
+}
+.dropdown-menu.show {
+  text-align: start;
+  margin-top: 10px !important;
+}
+.pointer {
+  cursor: pointer;
 }
