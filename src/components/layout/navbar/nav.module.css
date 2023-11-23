@@ -17,6 +17,7 @@
 .navLink {
   color: black !important;
   font-weight: 500;
+  font-size: 20px;
 }
 .btn {
   border: 1px solid var(--secondColor);
@@ -26,12 +27,22 @@
   align-items: center;
   padding: 10px 36px;
   color: var(--secondColor);
+  width: 150px;
   font-weight: 700;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.btn:hover {
+  background-color: var(--secondColor);
+  color: white !important;
 }
 .menu {
   color: var(--mainColor);
@@ -69,4 +80,7 @@
 .mobLink {
   color: #3a3a3a;
   font-weight: 700;
+}
+.navLink.active {
+  color: var(--mainColor) !important;
 }

@@ -1,0 +1,22 @@
+.revCard {
+  background: rgba(233, 235, 243, 0.8);
+  padding: 35px;
+}
+.av {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.name {
+  color: #28348a;
+  font-weight: 500;
+}
+.desc {
+  color: #3a3a3a;
+  text-align: center;
+  font-weight: 400;
+}

@@ -1,0 +1,30 @@
+.mainContainer {
+  background-color: #eaebf4;
+  height: 600px;
+}
+.title {
+  color: var(--mainColor);
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.desc {
+  font-weight: 500;
+  color: #3a3a3a;
+  text-align: center;
+}
+.btn {
+  border: 1px solid var(--secondColor);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 36px;
+  color: var(--secondColor);
+  font-weight: 700;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

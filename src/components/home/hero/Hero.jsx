@@ -1,8 +1,11 @@
 import React from "react";
 import style from "./hero.module.css";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const handleNavigate = () => navigate("/req");
   return (
     <div className={style.mainDiv}>
       <div className={style.overlay}>
@@ -13,6 +16,7 @@ const Hero = () => {
             aliquet ligula,.
           </p>
           <button
+            onClick={handleNavigate}
             className={`d-flex align-items-center justify-content-center ${style.btn}`}
           >
             {t("navReq")}

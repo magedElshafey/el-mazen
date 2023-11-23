@@ -1,0 +1,18 @@
+.title {
+  color: var(--mainColor);
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn {
+  background-color: white;
+  font-weight: 500;
+  color: var(--secondColor);
+  text-transform: capitalize;
+  border: 2px solid var(--secondColor);
+  padding: 16px 71px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

@@ -14,7 +14,21 @@ import Home from "./pages/Home";
 import Navbar from "./components/layout/navbar/Navbar";
 import Footer from "./components/layout/footer/Footer";
 // data
-import { navLinks, partners, portfolio, stats } from "./data/data";
+import {
+  navLinks,
+  partners,
+  portfolio,
+  stats,
+  services,
+  feat,
+  filters,
+} from "./data/data";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Req from "./pages/Req";
+import Real from "./pages/Real";
+import RealDetails from "./pages/RealDetails";
+import Thanks from "./pages/Thanks";
 const App = () => {
   const { i18n } = useTranslation();
   // handle language
@@ -51,8 +65,38 @@ const App = () => {
         <Route
           path="/"
           element={
-            <Home partners={partners} portfolio={portfolio} stats={stats} />
+            <Home
+              partners={partners}
+              portfolio={portfolio}
+              stats={stats}
+              services={services}
+              feat={feat}
+            />
           }
+        />
+      </Routes>
+      <Routes>
+        <Route path="/about" element={<About services={services} />} />
+      </Routes>
+      <Routes>
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Routes>
+        <Route path="/req" element={<Req />} />
+      </Routes>
+      <Routes>
+        <Route path="/thanks" element={<Thanks />} />
+      </Routes>
+      <Routes>
+        <Route
+          path="/real"
+          element={<Real portfolio={portfolio} filters={filters} />}
+        />
+      </Routes>
+      <Routes>
+        <Route
+          path="/real/:id"
+          element={<RealDetails portfolio={portfolio} />}
         />
       </Routes>
       <Footer links={navLinks} />

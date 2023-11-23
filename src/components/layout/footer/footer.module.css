@@ -32,3 +32,6 @@
   color: #3a3a3a;
   font-weight: 500;
 }
+.footerContainer {
+  border-top: 1px solid #ccc;
+}

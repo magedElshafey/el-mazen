@@ -1,0 +1,74 @@
+.aboutDesc {
+  color: #3a3a3a;
+  font-weight: 400;
+  width: 70%;
+}
+@media screen and (max-width: 767px) {
+  .aboutDesc {
+    width: 100%;
+  }
+}
+.btn {
+  background-color: white;
+  color: var(--secondColor);
+  border: 1px solid var(--secondColor);
+  font-weight: 700;
+  padding: 16px 71px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: var(--secondColor);
+  color: white !important;
+}
+.firstImg {
+  width: 253px;
+  height: 100%;
+  z-index: 8;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.secondImg {
+  width: 234px;
+  height: 100%;
+  z-index: 10;
+  border-radius: 10px;
+}
+.secondImg.ltr {
+  translate: 70% -80%;
+}
+.secondImg.rtl {
+  translate: -70% -80%;
+}
+.wrapper {
+  max-height: 400px;
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    direction: rtl !important;
+  }
+  .secondImg {
+    width: 200px;
+  }
+  .firstImg {
+    width: 220px;
+  }
+}
+.aboutTitle {
+  color: var(--mainColor);
+  font-size: 34px;
+  font-weight: 700;
+}

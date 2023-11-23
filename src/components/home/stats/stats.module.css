@@ -1,6 +1,6 @@
 .mainContainer {
-  width: 100vw;
-  height: 154px;
+  width: 94vw;
+  padding: 15px;
   background-color: var(--mainColor);
   display: flex;
   border-radius: 14px;
@@ -12,7 +12,7 @@
 }
 @media screen and (max-width: 767px) {
   .mainContainer {
-    height: auto;
+    width: 100vw;
   }
 }
 .number {

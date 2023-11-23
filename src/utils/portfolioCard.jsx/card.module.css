@@ -1,0 +1,45 @@
+.card {
+  width: 320px;
+  cursor: pointer;
+  box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.1),
+    0px 19px 19px 0px rgba(0, 0, 0, 0.09), 0px 43px 26px 0px rgba(0, 0, 0, 0.05),
+    0px 77px 31px 0px rgba(0, 0, 0, 0.01), 0px 120px 34px 0px rgba(0, 0, 0, 0);
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.card:hover {
+  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  -o-transform: scale(1.07);
+}
+.mainImg {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+.cardTitle {
+  color: #000;
+  font-weight: 500;
+}
+.location {
+  color: #000;
+  font-size: 14px;
+}
+.btn {
+  background-color: white;
+  font-weight: 500;
+  color: var(--secondColor);
+  text-transform: capitalize;
+  border: 2px solid var(--secondColor);
+  padding: 16px 71px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

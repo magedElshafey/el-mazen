@@ -1,9 +1,10 @@
 // hooks
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import style from "./nav.module.css";
 import logo from "../../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // icons
 import { FaGlobe } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
@@ -17,21 +18,28 @@ const Navbar = ({ links }) => {
   // handle show sidebar
   const [showSidebar, setShowSidebar] = useState(false);
   const handleShowSidebar = () => setShowSidebar(!showSidebar);
-
+  // handle navigate
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/req");
+    setShowSidebar(false);
+  };
   return (
     <>
       <div className={style.navContainer}>
         <div className="container d-flex justify-content-between align-items-center">
           <img alt="logo/img" className={style.logo} src={logo} />
-          <ul className="d-none d-md-flex align-items-center gap-4 p-0 m-0 ">
+          <ul className="d-none d-md-flex align-items-center gap-5 p-0 m-0 ">
             {links.map((item, index) => (
-              <Link key={index} className={style.navLink} to={item.path}>
+              <NavLink key={index} className={style.navLink} to={item.path}>
                 {i18n.language === "ar" ? item.arTitle : item.enTitle}
-              </Link>
+              </NavLink>
             ))}
           </ul>
           <div className="d-none d-md-flex align-items-center gap-4">
-            <button className={`${style.btn} `}>{t("navReq")}</button>
+            <button onClick={handleNavigate} className={`${style.btn} `}>
+              {t("navReq")}
+            </button>
             <div className="dropdown ">
               <button
                 className="dropdown-toggle dropmenu"
@@ -128,7 +136,9 @@ const Navbar = ({ links }) => {
               </div>
             </li>
             <li className="mt-5 d-flex justify-content-center">
-              <button className={`${style.btn} `}>{t("navReq")}</button>
+              <button onClick={handleNavigate} className={`${style.btn} `}>
+                {t("navReq")}
+              </button>
             </li>
           </ul>
         </div>

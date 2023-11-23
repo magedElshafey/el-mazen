@@ -1,0 +1,50 @@
+.mainContainer {
+  background-image: url("../../../assets/hero-02.png");
+  width: 100vw;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+}
+.box {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: var(--mainColor);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.title,
+.titleTwo {
+  color: #fff;
+  font-weight: 700;
+}
+.title {
+  font-size: 35px;
+}
+.titleTwo {
+  font-size: 20px;
+}
+.thanksDesc {
+  color: #fff;
+  opacity: 0.7;
+  font-weight: 400;
+}
+.btn {
+  padding: 16px 71px;
+  background-color: transparent;
+  color: var(--secondColor);
+  font-weight: 700;
+  text-transform: capitalize;
+  border: 1px solid var(--secondColor);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}

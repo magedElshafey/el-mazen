@@ -31,7 +31,6 @@ li {
   border: none !important;
   background-color: transparent !important;
 }
-/* App.css */
 .dropmenu::after {
   display: none;
 }
@@ -42,3 +41,125 @@ li {
 .pointer {
   cursor: pointer;
 }
+.title {
+  text-align: center;
+  color: var(--mainColor);
+  font-size: 34px;
+  font-weight: 700;
+}
+.border {
+  border-top: 1px solid #b7b7b7;
+}
+.label {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+.inputContainer,
+.areaContainer {
+  padding: 7px;
+  background-color: white;
+  position: relative;
+
+  width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.inputContainer {
+  height: 36px;
+}
+.areaContainer {
+  height: 80px;
+}
+.inp,
+.area,
+.filterInp {
+  border: none;
+  width: 95%;
+  background-color: transparent;
+}
+.inp:focus,
+.area:focus,
+.filterInp:focus {
+  outline: none !important;
+}
+.inp::placeholder,
+.filterInp::placeholder {
+  text-transform: capitalize;
+}
+.inputSvg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.inputSvg.rtl {
+  right: 7px;
+}
+.inputSvg.ltr {
+  left: 7px;
+}
+.top-label-input {
+  width: 95%;
+}
+.top-label-input:focus {
+  outline: none;
+}
+.phone {
+  border: none;
+  width: 100%;
+}
+.phone:focus {
+  outline: none !important;
+}
+.filterContainer {
+  position: relative;
+
+  height: 60px;
+  box-shadow: -16px 3px 35px 0px rgba(0, 0, 0, 0.1),
+    -63px 13px 64px 0px rgba(0, 0, 0, 0.09),
+    -142px 29px 87px 0px rgba(0, 0, 0, 0.05),
+    -252px 51px 103px 0px rgba(0, 0, 0, 0.01),
+    -393px 80px 112px 0px rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.select {
+  display: block;
+  margin-bottom: 10px;
+  border: none;
+  width: 100%;
+}
+.select:focus {
+  outline: none;
+}
+.activeFilter {
+  color: var(--mainColor);
+}
+.filterBorder {
+  border-bottom: 1px solid #ccc;
+}
+.filterBtn {
+  color: white;
+  background-color: var(--secondColor);
+  border: 1px solid var(--secondColor);
+  padding: 8px;
+  width: 80%;
+  margin: auto !important;
+  text-transform: capitalize;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
