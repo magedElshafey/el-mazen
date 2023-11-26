@@ -7,7 +7,7 @@ import Services from "../components/home/services/Services";
 import AboutUS from "../components/home/about/AboutUS";
 import Featuers from "../components/home/featuers/Featuers";
 import Reviews from "../components/home/Reviews/Reviews";
-const Home = ({ partners, portfolio, stats, services, feat }) => {
+const Home = ({ partners, portfolio, stats, services, feat, rev }) => {
   return (
     <div className="mt-5 pt-4">
       <Hero />
@@ -17,7 +17,7 @@ const Home = ({ partners, portfolio, stats, services, feat }) => {
       <Services data={services} />
       <AboutUS showSeeMore={true} />
       <Featuers data={feat} />
-      <Reviews />
+      <Reviews data={rev} />
     </div>
   );
 };

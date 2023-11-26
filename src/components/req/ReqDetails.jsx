@@ -93,6 +93,7 @@ const ReqDetails = () => {
                   </label>
                   <div className="inputContainer">
                     <input
+                    min={0}
                       className="inp"
                       placeholder={t("salary")}
                       type="number"

@@ -15,10 +15,18 @@ import feat2 from "../assets/feat-02.svg";
 import feat3 from "../assets/feat-03.svg";
 import feat4 from "../assets/feat-04.svg";
 // slider
-import slide1 from "../assets/slider-01.png";
-import slide2 from "../assets/slider-02.png";
-import slide3 from "../assets/slider-03.png";
-import slide4 from "../assets/slider-04.png";
+import slide1 from "../assets/slider-01 (1).jpg";
+import slide2 from "../assets/slider-01 (2).jpg";
+import slide3 from "../assets/slider-03.jpg";
+import slide4 from "../assets/slider-04.jpg";
+// portfolio
+import blog1 from "../assets/blog-01.png";
+import blog2 from "../assets/blog-02.png";
+import blog3 from "../assets/blog-03.png";
+import blog4 from "../assets/blog-04.png";
+import blog5 from "../assets/blog-05.png";
+// rev
+import av from "../assets/av.svg";
 export const navLinks = [
   {
     enTitle: "home",
@@ -34,6 +42,11 @@ export const navLinks = [
     enTitle: "real state",
     arTitle: "عقارات",
     path: "/real",
+  },
+  {
+    enTitle: "Blog",
+    arTitle: "المدونة",
+    path: "/blog",
   },
   {
     enTitle: "contact us",
@@ -318,5 +331,218 @@ export const filters = [
         arTitle: "الرياض",
       },
     ],
+  },
+];
+export const blogs = [
+  {
+    id: 1,
+    img: blog1,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz masr",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 2,
+    img: blog2,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megzooo",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 3,
+    img: blog3,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 4,
+    img: blog4,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 5,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 6,
+    img: blog3,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz masr",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 7,
+    img: blog4,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 8,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 9,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 10,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 11,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 12,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 13,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 14,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 15,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 16,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 17,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 18,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 19,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 20,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: 21,
+    img: blog5,
+    title: "Praesent vel interdum ",
+    desc: "Praesent vel interdum nulla, et volutpat est. Praesent consectetur aliquet ligula.",
+    date: "NOVEMBER 26, 2023  |  BY Megz",
+    allDesc:
+      "There are many variationspassages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passageof Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessarymaking this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore Always free from repetition, injectehumour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeatpredefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from.Repetition, injected humour, or non-characteristic words etc.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+];
+export const rev = [
+  {
+    img: av,
+    name: "maged elshafey",
+    rev: "Praesent vel interdum nulla, et volutpat est. Praesent c",
+  },
+  {
+    img: av,
+    name: "Esraa Mostafa",
+    rev: "Praesent vel interdum nulla, et volutpat est. Praesent c",
+  },
+  {
+    img: av,
+    name: "Manar El hefnawy",
+    rev: "Praesent vel interdum nulla, et volutpat est. Praesent c",
+  },
+  {
+    img: av,
+    name: "Mahmoud Hamza",
+    rev: "Praesent vel interdum nulla, et volutpat est. Praesent c",
   },
 ];

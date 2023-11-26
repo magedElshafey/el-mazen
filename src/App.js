@@ -22,6 +22,8 @@ import {
   services,
   feat,
   filters,
+  blogs,
+  rev,
 } from "./data/data";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -29,6 +31,8 @@ import Req from "./pages/Req";
 import Real from "./pages/Real";
 import RealDetails from "./pages/RealDetails";
 import Thanks from "./pages/Thanks";
+import Blogs from "./pages/Blogs";
+import Blog from "./pages/Blog";
 const App = () => {
   const { i18n } = useTranslation();
   // handle language
@@ -71,6 +75,7 @@ const App = () => {
               stats={stats}
               services={services}
               feat={feat}
+              rev={rev}
             />
           }
         />
@@ -86,6 +91,12 @@ const App = () => {
       </Routes>
       <Routes>
         <Route path="/thanks" element={<Thanks />} />
+      </Routes>
+      <Routes>
+        <Route path="/blog" element={<Blogs data={blogs} />} />
+      </Routes>
+      <Routes>
+        <Route path="/blog/:id" element={<Blog data={blogs} />} />
       </Routes>
       <Routes>
         <Route

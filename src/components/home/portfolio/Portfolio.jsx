@@ -14,7 +14,7 @@ const Portfolio = ({ data }) => {
       <div className="row justify-content-center gap-5">
         {data.slice(0, 3).map((item, index) => (
           <div key={index} className="col-12 col-md-5 col-lg-3">
-            <PortfolioCard item={item} />
+            <PortfolioCard isBg={false} item={item} />
           </div>
         ))}
       </div>

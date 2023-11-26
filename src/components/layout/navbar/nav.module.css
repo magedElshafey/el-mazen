@@ -83,4 +83,5 @@
 }
 .navLink.active {
   color: var(--mainColor) !important;
+  font-weight: bold;
 }
