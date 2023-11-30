@@ -34,7 +34,7 @@ const swiperOptions = {
   },
 };
 const Reviews = ({ data }) => {
-  const { t, i18n } = useTranslation();
+  const { t} = useTranslation();
   return (
     <div className="container my-5">
       <p className="m-0 p-0 mb-3 title">{t("rev")}</p>
@@ -49,9 +49,9 @@ const Reviews = ({ data }) => {
               key={index}
               className="d-flex flex-column gap-3 align-items-center justify-content-center"
             >
-              <img alt="av/img" src={item.img} className={style.av} />
+              <img alt="av/img" src={item.photo} className={style.av} />
               <p className={`m-0 p-0 ${style.name}`}>{item.name}</p>
-              <p className={`m-0 p-0 mb-4 ${style.desc}`}>{item.rev}</p>
+              <p className={`m-0 p-0 mb-4 ${style.desc}`}>{item.review}</p>
             </SwiperSlide>
           ))}
         </Swiper>

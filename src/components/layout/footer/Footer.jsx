@@ -3,7 +3,8 @@ import style from "./footer.module.css";
 import logo from "../../../assets/logo.png";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-const Footer = ({ links }) => {
+import harag from "../../../assets/7rag.png"
+const Footer = ({ links, social }) => {
   const { t, i18n } = useTranslation();
   return (
     <div className={` py-3 ${style.footerContainer} `}>
@@ -13,7 +14,7 @@ const Footer = ({ links }) => {
             <img alt="logo/img" className={style.logo} src={logo} />
             <p className={`m-0 p-0 mt-2 ${style.desc}`}>{t("footerDesc")}</p>
             <div className="d-flex align-items-center gap-2 mt-3">
-              <a href="www.linkedin.com" target="_blank" rel="noreferrer">
+              <a href={social.linkedIn} target="_blank" rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -27,7 +28,7 @@ const Footer = ({ links }) => {
                   />
                 </svg>
               </a>
-              <a href="www.facebook.com" target="_blank" rel="noreferrer">
+              <a href={social.facebook} target="_blank" rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -41,7 +42,7 @@ const Footer = ({ links }) => {
                   />
                 </svg>
               </a>
-              <a href="www.instagram.com" target="_blank" rel="noreferrer">
+              <a href={social.instagram} target="_blank" rel="noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -54,6 +55,39 @@ const Footer = ({ links }) => {
                     fill="#28348A"
                   />
                 </svg>
+              </a>
+              <a href={social.instagram} target="_blank" rel="noreferrer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 40 35"
+                  fill="none"
+                >
+                  <path
+                    d="M31.1111 0H37.0345L24.0966 14.8255L39.318 35H27.4011L18.0669 22.7621L7.38589 35H1.46002L15.2983 19.1414L0.697266 0H12.9183L21.3545 11.1831L31.1111 0ZM29.0352 31.4469H32.318L11.1321 3.36724H7.61278L29.0352 31.4469Z"
+                    fill="#28348A"
+                  />
+                </svg>
+              </a>
+              <a href={social.instagram} target="_blank" rel="noreferrer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 36 35"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M17.8104 0C15.0256 0 12.3549 1.10625 10.3858 3.07538C8.41663 5.04451 7.31039 7.71523 7.31039 10.5V13.7812L5.73539 12.6C5.55154 12.4621 5.34233 12.3618 5.1197 12.3048C4.89708 12.2477 4.6654 12.2351 4.4379 12.2676C4.2104 12.3001 3.99152 12.3771 3.79377 12.4942C3.59602 12.6113 3.42327 12.7661 3.28539 12.95C3.1475 13.1339 3.04717 13.3431 2.99014 13.5657C2.9331 13.7883 2.92047 14.02 2.95298 14.2475C2.98548 14.475 3.06247 14.6939 3.17956 14.8916C3.29664 15.0894 3.45154 15.2621 3.63539 15.4L6.90089 17.85C6.12389 19.894 4.22864 22.0325 1.16089 23.8752C0.959667 23.9988 0.78523 24.1613 0.647874 24.3533C0.510517 24.5454 0.413024 24.763 0.361151 24.9933C0.309278 25.2236 0.304076 25.462 0.345853 25.6944C0.387629 25.9268 0.475537 26.1484 0.604387 26.3463C2.56089 29.281 5.66539 31.5 9.06039 31.5C12.1824 31.5 14.3226 35 17.8104 35C21.3296 35 23.4261 31.5 26.5604 31.5C29.9554 31.5 33.0599 29.281 35.0164 26.3463C35.1452 26.1484 35.2331 25.9268 35.2749 25.6944C35.3167 25.462 35.3115 25.2236 35.2596 24.9933C35.2077 24.763 35.1103 24.5454 34.9729 24.3533C34.8355 24.1613 34.6611 23.9988 34.4599 23.8752C31.3921 22.0325 29.4969 19.894 28.7199 17.85L31.9854 15.4C32.3567 15.1215 32.6022 14.707 32.6678 14.2475C32.7334 13.788 32.6139 13.3213 32.3354 12.95C32.0569 12.5787 31.6423 12.3332 31.1829 12.2676C30.7234 12.202 30.2567 12.3215 29.8854 12.6L28.3104 13.7812V10.5C28.3104 7.71523 27.2041 5.04451 25.235 3.07538C23.2659 1.10625 20.5952 0 17.8104 0Z"
+                    fill="#28348A"
+                  />
+                </svg>
+              </a>
+              <a href={social.instagram} target="_blank" rel="noreferrer">
+              <img className= {style.harag} alt = "7arag/img" src = {harag} /> 
               </a>
             </div>
           </div>
@@ -74,11 +108,11 @@ const Footer = ({ links }) => {
               </svg>
               <a
                 className={style.link}
-                href="mailto:ElMazen@gamil.com"
+                href={`mailto:${social.email}`}
                 target="_blank"
                 rel="noreferrer"
               >
-                ElMazen@gamil.com
+                {social.email}
               </a>
             </div>
             <div className="d-flex align-items-center gap-1 mb-2">
@@ -96,11 +130,11 @@ const Footer = ({ links }) => {
               </svg>
               <a
                 className={style.link}
-                href="tel:+977 700042560"
+                href={`tel:${social.phone}`}
                 target="_blank"
                 rel="noreferrer"
               >
-                +977 700042560
+                {social.phone}
               </a>
             </div>
             <div className="d-flex  gap-1 mb-1">
@@ -120,7 +154,7 @@ const Footer = ({ links }) => {
                 className={`d-inline-block ${style.link} ${style.map}`}
                 href="www"
               >
-                Saudi Arabia, Riyadh, King Abdullah Road
+                {social.address}
               </a>
             </div>
             <div className="mt-3 d-md-none">

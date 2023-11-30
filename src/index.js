@@ -10,10 +10,15 @@ import "./i18n";
 import "./index.css";
 import App from "./App";
 import { Toaster } from "react-hot-toast";
+// react query
+import { QueryClientProvider, QueryClient } from "react-query";
+const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Toaster position="top-center" reverseOrder={false} />
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
   </React.StrictMode>
 );

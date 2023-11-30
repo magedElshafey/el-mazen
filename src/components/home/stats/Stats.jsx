@@ -4,7 +4,11 @@ import { useTranslation } from "react-i18next";
 const Stats = ({ data }) => {
   const { i18n } = useTranslation();
   return (
-    <div className={style.mainContainer}>
+    <div
+      className={`${style.mainContainer} ${
+        i18n.language === "en" ? style.ltrBorder : style.rtlBorder
+      }`}
+    >
       <div className="container">
         <div className="d-flex align-items-center justify-content-center gap-5 flex-wrap  ">
           {data.map((item, index) => (

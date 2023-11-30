@@ -14,6 +14,7 @@ const ReqDetails = () => {
   const [salary, setSalary] = useState("");
   const [bank, setBank] = useState("");
   const [commitments, setCommitments] = useState("");
+  const [duration, setDuration] = useState("");
   const [agree, setAgree] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -93,7 +94,7 @@ const ReqDetails = () => {
                   </label>
                   <div className="inputContainer">
                     <input
-                    min={0}
+                      min={0}
                       className="inp"
                       placeholder={t("salary")}
                       type="number"
@@ -116,18 +117,37 @@ const ReqDetails = () => {
                     />
                   </div>
                 </div>
-                <div className="mb-2">
-                  <label htmlFor="com" className="label d-inline-block mb-1">
-                    {t("com")}
-                  </label>
-                  <div className="inputContainer">
-                    <input
-                      className="inp"
-                      placeholder={t("com")}
-                      type="text"
-                      id="com"
-                      onChange={(e) => setCommitments(e.target.value)}
-                    />
+                <div className="mb-2 row ">
+                  <div className="col-12 col-md-6 mb-2 mb-md-0">
+                    <label htmlFor="com" className="label d-inline-block mb-1">
+                      {t("com")}
+                    </label>
+                    <div className="inputContainer">
+                      <input
+                        className="inp"
+                        placeholder={t("com")}
+                        type="text"
+                        id="com"
+                        onChange={(e) => setCommitments(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-12 col-md-6 mb-2 mb-md-0">
+                    <label
+                      htmlFor="duration"
+                      className="label d-inline-block mb-1"
+                    >
+                      {t("duration")}
+                    </label>
+                    <div className="inputContainer">
+                      <input
+                        className="inp"
+                        placeholder={t("duration")}
+                        type="text"
+                        id="duration"
+                        onChange={(e) => setDuration(e.target.value)}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="mb-2 d-flex align-items-center gap-1">

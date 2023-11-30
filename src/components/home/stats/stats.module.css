@@ -3,12 +3,22 @@
   padding: 15px;
   background-color: var(--mainColor);
   display: flex;
-  border-radius: 0 14px 14px 0;
+
   align-items: center;
+}
+.ltrBorder {
+  border-radius: 0 14px 14px 0;
   -webkit-border-radius: 0 14px 14px 0;
   -moz-border-radius: 0 14px 14px 0;
   -ms-border-radius: 0 14px 14px 0;
   -o-border-radius: 0 14px 14px 0;
+}
+.rtlBorder {
+  border-radius: 14px 0 0 14px;
+  -webkit-border-radius: 14px 0 0 14px;
+  -moz-border-radius: 14px 0 0 14px;
+  -ms-border-radius: 14px 0 0 14px;
+  -o-border-radius: 14px 0 0 14px;
 }
 @media screen and (max-width: 767px) {
   .mainContainer {

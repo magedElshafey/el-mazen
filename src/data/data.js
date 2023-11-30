@@ -49,6 +49,11 @@ export const navLinks = [
     path: "/blog",
   },
   {
+    enTitle: "Services",
+    arTitle: "الخدمات",
+    path: "/serv",
+  },
+  {
     enTitle: "contact us",
     arTitle: "تواصل معنا",
     path: "/contact",

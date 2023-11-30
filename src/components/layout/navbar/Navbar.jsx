@@ -3,19 +3,19 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import style from "./nav.module.css";
-import logo from "../../../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import ksa from "../../../assets/ksa.svg";
 import usa from "../../../assets/usa.png";
 // icons
-import { FaGlobe } from "react-icons/fa";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
-const Navbar = ({ links }) => {
+const Navbar = ({ links, logo }) => {
   const { i18n, t } = useTranslation();
   // handle change language
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    localStorage.setItem("lang", JSON.stringify(lng));
+    window.location.reload();
   };
   // handle show sidebar
   const [showSidebar, setShowSidebar] = useState(false);

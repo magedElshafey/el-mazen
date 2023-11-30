@@ -1,17 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./contact.module.css";
 import { useTranslation } from "react-i18next";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
-const Contactus = () => {
+import { useMutation } from "react-query";
+import { request } from "../../utils/axios";
+import toast from "react-hot-toast";
+const Contactus = ({ social }) => {
   const { t, i18n } = useTranslation();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const handlePhoneNumberChange = (
+    isValid,
+    value,
+    selectedCountryData,
+    fullNumber,
+    extension
+  ) => {
+    setPhone(value);
+  };
+  const [message, setMessage] = useState("");
+  const handleSendMsg = (data) => {
+    return request({ url: "/sendContactMessage", method: "post", data });
+  };
+  const { isLoading, mutate } = useMutation(handleSendMsg, {
+    onSuccess: (data) => {
+      console.log("data", data.data);
+      if (data?.data.status === "success") {
+        toast.success(
+          i18n.language === "en"
+            ? "your message sent succfully"
+            : "تم ارسال رسالتك بنجاح"
+        );
+        setName("");
+        setPhone("");
+        setMessage("");
+        setEmail("");
+      }
+    },
+    onError: () => {
+      toast.error(
+        i18n.language === "en"
+          ? "there is an error occurred , please try again"
+          : "حدث خطأ عند ارسال البيانات حاول مرة اخري"
+      );
+    },
+  });
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("name", name);
+    console.log("phone", phone);
+    console.log("email", email);
+    console.log("msg", message);
+    if (name.trim() === "" || email.trim() === "") {
+      toast.error(
+        i18n.language === "ar"
+          ? "جميع الحقول المطلوبة"
+          : "All Fields are Required"
+      );
+      return;
+    } else {
+      const contactData = { name, phone, content: message, email };
+      mutate(contactData);
+    }
+  };
   return (
     <div className={style.mainContainer}>
       <div className="container ">
         <div className="row gap-5 justify-content-end align-items-center">
           <div className="col-12 col-md-7 mb-3 p-2">
             <p className={`m-0 p-0 mb-3 ${style.title}`}>{t("navContact")}</p>
-            <form>
+            <form onSubmit={handleClick}>
               <div className="mb-2">
                 <label htmlFor="name" className="label d-inline-block mb-1">
                   {t("name")}
@@ -22,6 +82,7 @@ const Contactus = () => {
                     placeholder={t("name")}
                     type="text"
                     id="name"
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
               </div>
@@ -35,6 +96,7 @@ const Contactus = () => {
                     placeholder={t("email")}
                     type="email"
                     id="email"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <svg
                     className={`inputSvg ${
@@ -88,6 +150,7 @@ const Contactus = () => {
                     inputClassName="phone"
                     placeholder=""
                     defaultCountry="sa"
+                    onPhoneNumberChange={handlePhoneNumberChange}
                   />
                   <svg
                     className={`inputSvg ${
@@ -118,11 +181,17 @@ const Contactus = () => {
                   {t("message")}
                 </label>
                 <div className="areaContainer">
-                  <textarea id="message" className="area"></textarea>
+                  <textarea
+                    onChange={(e) => setMessage(e.target.value)}
+                    id="message"
+                    className="area"
+                  ></textarea>
                 </div>
               </div>
               <div className="d-flex justify-content-center">
-                <button className={style.btn}>{t("send")}</button>
+                <button type="submit" className={style.btn}>
+                  {t("send")}
+                </button>
               </div>
             </form>
           </div>
@@ -144,11 +213,11 @@ const Contactus = () => {
                 </svg>
                 <a
                   className="text-white"
-                  href="mailto:ElMazen@gamil.com"
+                  href={`mailto:${social.email}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  ElMazen@gamil.com
+                  {social.email}
                 </a>
               </div>
               <div className="d-flex align-items-center  gap-1 mb-3">
@@ -166,11 +235,11 @@ const Contactus = () => {
                 </svg>
                 <a
                   className="text-white"
-                  href="tel:+977 700042560"
+                  href={`tel:${social.phone}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  +977 700042560
+                  {social.phone}
                 </a>
               </div>
               <div className="d-flex align-items-center   gap-1 mb-3">
@@ -187,11 +256,11 @@ const Contactus = () => {
                   />
                 </svg>
                 <a className="text-white" href="www">
-                  Saudi Arabia, Riyadh, King Abdullah Road
+                    {social.address}
                 </a>
               </div>
               <div className="d-flex align-items-center  gap-3 mt-3">
-                <a href="www.linkedin.com" target="_blank" rel="noreferrer">
+                <a href={social.linkedIn} target="_blank" rel="noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -205,7 +274,7 @@ const Contactus = () => {
                     />
                   </svg>
                 </a>
-                <a href="www.facebook.com" target="_blank" rel="noreferrer">
+                <a href={social.facebook} target="_blank" rel="noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -219,7 +288,7 @@ const Contactus = () => {
                     />
                   </svg>
                 </a>
-                <a href="www.instagram.com" target="_blank" rel="noreferrer">
+                <a href={social.instagram} target="_blank" rel="noreferrer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
