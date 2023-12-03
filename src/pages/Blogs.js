@@ -3,11 +3,21 @@ import { useTranslation } from "react-i18next";
 import Meta from "../utils/meta/Meta";
 import BlogCard from "../utils/blogCard/BlogCard";
 import ReactPaginate from "react-paginate";
-const Blogs = ({ data }) => {
+import { request } from "../utils/axios";
+import { useQuery } from "react-query";
+import Spinner from "../utils/spinner/Spinner";
+const Blogs = () => {
+  const fetchData = () => {
+    return request({ url: "/blogs" });
+  };
+  const { isLoading, data } = useQuery("blogs", fetchData, {
+    cacheTime: 80000,
+    staleTime: 80000,
+  });
   const [pageNumber, setPageNumber] = useState(0);
   const usersPerPage = 4;
   const pagesVisited = pageNumber * usersPerPage;
-  const pageCount = data.length / usersPerPage;
+  const pageCount = data?.data?.data?.length / usersPerPage;
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
@@ -27,44 +37,50 @@ const Blogs = ({ data }) => {
   const { t, i18n } = useTranslation();
   return (
     <>
-      <Meta title={t("blog")} />
-      <div ref={sectionRef} className="container mt-5 pt-5">
-        <p className="m-0 p-0 title mb-3">{t("blog")}</p>
-        <div>
-          {data
-            .slice(pagesVisited, pagesVisited + usersPerPage)
-            .map((item, index) => (
-              <BlogCard key={index} item={item} />
-            ))}
-        </div>
-        <div className="d-flex justify-content-center">
-          <ReactPaginate
-            previousLabel={
-              i18n.language === "en" ? (
-                <div dangerouslySetInnerHTML={{ __html: prevBtn }} />
-              ) : (
-                <div dangerouslySetInnerHTML={{ __html: nextBtn }} />
-              )
-            }
-            nextLabel={
-              i18n.language === "en" ? (
-                <div dangerouslySetInnerHTML={{ __html: nextBtn }} />
-              ) : (
-                <div dangerouslySetInnerHTML={{ __html: prevBtn }} />
-              )
-            }
-            pageCount={pageCount}
-            onPageChange={changePage}
-            containerClassName={"paginationBttns"}
-            previousLinkClassName={"previousBttn"}
-            nextLinkClassName={"nextBttn"}
-            disabledClassName={"paginationDisabled"}
-            activeClassName={"paginationActive"}
-            breakLabel="..."
-            onClick={handleFilterClick}
-          />
-        </div>
-      </div>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          <Meta title={t("blog")} />
+          <div ref={sectionRef} className="container mt-5 pt-5">
+            <p className="m-0 p-0 title mb-3">{t("blog")}</p>
+            <div>
+              {data.data.data
+                .slice(pagesVisited, pagesVisited + usersPerPage)
+                .map((item, index) => (
+                  <BlogCard key={index} item={item} />
+                ))}
+            </div>
+            <div className="d-flex justify-content-center">
+              <ReactPaginate
+                previousLabel={
+                  i18n.language === "en" ? (
+                    <div dangerouslySetInnerHTML={{ __html: prevBtn }} />
+                  ) : (
+                    <div dangerouslySetInnerHTML={{ __html: nextBtn }} />
+                  )
+                }
+                nextLabel={
+                  i18n.language === "en" ? (
+                    <div dangerouslySetInnerHTML={{ __html: nextBtn }} />
+                  ) : (
+                    <div dangerouslySetInnerHTML={{ __html: prevBtn }} />
+                  )
+                }
+                pageCount={pageCount}
+                onPageChange={changePage}
+                containerClassName={"paginationBttns"}
+                previousLinkClassName={"previousBttn"}
+                nextLinkClassName={"nextBttn"}
+                disabledClassName={"paginationDisabled"}
+                activeClassName={"paginationActive"}
+                breakLabel="..."
+                onClick={handleFilterClick}
+              />
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 };

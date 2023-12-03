@@ -14,17 +14,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/layout/navbar/Navbar";
 import Footer from "./components/layout/footer/Footer";
 // data
-import {
-  navLinks,
-  partners,
-  portfolio,
-  stats,
-  services,
-  feat,
-  filters,
-  blogs,
-  rev,
-} from "./data/data";
+import { navLinks, portfolio, filters, blogs } from "./data/data";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Req from "./pages/Req";
@@ -97,8 +87,8 @@ const App = () => {
                 <Home
                   hero={data.data.data.header}
                   partners={data.data.data.partners}
-                  portfolio={portfolio}
-                  stats={stats}
+                  portfolio={data.data.data.realState}
+                  stats={data.data.data.statistics}
                   services={data.data.data.services}
                   about={data.data.data.aboutUs}
                   feat={data.data.data.features}

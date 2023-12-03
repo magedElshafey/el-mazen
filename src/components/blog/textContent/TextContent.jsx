@@ -8,14 +8,19 @@ const TextContent = ({ data }) => {
       <p className="m-0 p-0 title mb-3 mt-3">{data.title}</p>
       <div className="row justify-content-center mb-4">
         <div className="col-12">
-          <img src={data.img} alt="blog/img" className={style.mainImg} />
+          <img src={data.thumbnail} alt="blog/img" className={style.mainImg} />
         </div>
-        <p className={`m-0 p-0 mt-3 mb-5 ${style.desc}`}>{data.allDesc}</p>
+        <div
+          className={`m-0 p-0 mt-3 mb-5 ${style.desc}`}
+          dangerouslySetInnerHTML={{ __html: data.content }}
+        />
+
         <p
           dir={i18n.language === "ar" ? "ltr" : "rtl"}
           className={`m-0 p-0 text-uppercase ${style.date}`}
         >
-          {data.date}
+          {i18n.language === "ar" ? data.Publish_date_ar : data.Publish_date_en}{" "}
+          |{data.publisher}
         </p>
       </div>
     </div>

@@ -16,8 +16,8 @@ const Stats = ({ data }) => {
               className={`d-flex flex-column  align-items-center mx-0 px-0 px-md-2 mx-lg-5 px-lg-5  ${style.info}`}
               key={index}
             >
-              <p className={`m-0 p-0 ${style.number}`}>{item.number}</p>
-              <p className={`m-0 p-0 ${style.title}`}>{item.enTitle}</p>
+              <p className={`m-0 p-0 ${style.number}`}>{item.value}</p>
+              <p className={`m-0 p-0 ${style.title}`}>{item.title}</p>
             </div>
           ))}
         </div>

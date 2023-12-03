@@ -1,9 +1,8 @@
 import React from "react";
 import AboutUs from "../components/home/about/AboutUS";
-import Services from "../components/home/services/Services";
 import Meta from "../utils/meta/Meta";
 import { useTranslation } from "react-i18next";
-const About = ({ services, about }) => {
+const About = ({ about }) => {
   const { i18n } = useTranslation();
   return (
     <>

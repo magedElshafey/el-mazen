@@ -1,20 +1,16 @@
 import React from "react";
 import style from "./card.module.css";
-import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 const PortfolioCard = ({ item, isBg }) => {
-  const { i18n } = useTranslation();
   return (
     <Link
       style={isBg ? { backgroundColor: "red" } : undefined}
       to={`/real/${item.id}`}
       className={`m-0 p-0 ${style.card}`}
     >
-      <img src={item.img} alt="portfolio/img" className={style.mainImg} />
+      <img src={item.photo} alt="portfolio/img" className={style.mainImg} />
       <div className={`${isBg ? style.bg : null} `}>
-        <p className={`mb-2 px-2 py-0 ${style.cardTitle}`}>
-          {i18n.language === "ar" ? item.arTitle : item.enTitle}
-        </p>
+        <p className={`mb-2 px-2 py-0 ${style.cardTitle}`}>{item.name}</p>
         <div className="d-flex align-items-center gap-1 px-2 pb-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,9 +24,7 @@ const PortfolioCard = ({ item, isBg }) => {
               fill="black"
             />
           </svg>
-          <p className={`m-0 p-0 ${style.location}`}>
-            {i18n.language === "ar" ? item.arLocation : item.enLocation}
-          </p>
+          <p className={`m-0 p-0 ${style.location}`}>{item.location}</p>
         </div>
       </div>
     </Link>

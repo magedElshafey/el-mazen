@@ -26,7 +26,6 @@ const Contactus = ({ social }) => {
   };
   const { isLoading, mutate } = useMutation(handleSendMsg, {
     onSuccess: (data) => {
-      console.log("data", data.data);
       if (data?.data.status === "success") {
         toast.success(
           i18n.language === "en"
@@ -256,7 +255,7 @@ const Contactus = ({ social }) => {
                   />
                 </svg>
                 <a className="text-white" href="www">
-                    {social.address}
+                  {social.address}
                 </a>
               </div>
               <div className="d-flex align-items-center  gap-3 mt-3">
