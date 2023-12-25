@@ -7,8 +7,8 @@ const AboutUS = ({ showSeeMore, data, allDesc }) => {
   const handleNavigate = () => navigate("/about");
   const { t, i18n } = useTranslation();
   return (
-    <div className="mt-5 pt-5 container mb-5 ">
-      <div className="w-100 d-flex flex-column flex-md-row  justify-content-between">
+    <div className="container my-3 my-md-5">
+      <div className="w-100 d-flex flex-column flex-md-row align-items-center  justify-content-between">
         <div>
           <p
             className={`m-0 p-0 mb-3 text-center ${style.aboutTitle}   ${
@@ -17,12 +17,12 @@ const AboutUS = ({ showSeeMore, data, allDesc }) => {
           >
             {data.title}
           </p>
-          <p className={`${style.aboutDesc} m-0 p-0 mb-3`}>
-            {allDesc ? data.des : data.des.substr(0, 100)}
+          <p className={`${style.aboutDesc} m-0 p-0 `}>
+            {allDesc ? data.des : data.des.substr(0, 350)}
           </p>
           {showSeeMore && (
             <div
-              className={`d-flex justify-content-center justify-content-md-start `}
+              className={`d-flex justify-content-center justify-content-md-start mt-4 `}
             >
               <button
                 onClick={handleNavigate}

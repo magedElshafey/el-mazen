@@ -6,7 +6,9 @@ import "react-intl-tel-input/dist/main.css";
 import { useMutation } from "react-query";
 import { request } from "../../utils/axios";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const Contactus = ({ social }) => {
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,6 +38,7 @@ const Contactus = ({ social }) => {
         setPhone("");
         setMessage("");
         setEmail("");
+        navigate("/thanks/form");
       }
     },
     onError: () => {
@@ -81,6 +84,7 @@ const Contactus = ({ social }) => {
                     placeholder={t("name")}
                     type="text"
                     id="name"
+                    value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
@@ -96,6 +100,7 @@ const Contactus = ({ social }) => {
                     type="email"
                     id="email"
                     onChange={(e) => setEmail(e.target.value)}
+                    value={email}
                   />
                   <svg
                     className={`inputSvg ${
@@ -184,6 +189,7 @@ const Contactus = ({ social }) => {
                     onChange={(e) => setMessage(e.target.value)}
                     id="message"
                     className="area"
+                    value={message}
                   ></textarea>
                 </div>
               </div>

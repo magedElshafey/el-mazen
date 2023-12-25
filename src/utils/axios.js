@@ -4,7 +4,7 @@ const lang = localStorage.getItem("lang")
   ? JSON.parse(localStorage.getItem("lang"))
   : "ar";
 const client = axios.create({
-  baseURL: "https://mazen.technomasrsystems.com/api",
+  baseURL: "https://admin.mazen.com.sa/api",
   headers: {
     "Content-Type": "application/json",
     lang,

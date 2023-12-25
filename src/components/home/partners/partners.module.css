@@ -1,6 +1,4 @@
 .img {
   width: 125px;
   height: 100px;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
 }

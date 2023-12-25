@@ -40,13 +40,8 @@ export const navLinks = [
   },
   {
     enTitle: "real state",
-    arTitle: "عقارات",
+    arTitle: "العقارات",
     path: "/real",
-  },
-  {
-    enTitle: "Blog",
-    arTitle: "المدونة",
-    path: "/blog",
   },
   {
     enTitle: "Services",
@@ -54,9 +49,14 @@ export const navLinks = [
     path: "/serv",
   },
   {
+    enTitle: "Blog",
+    arTitle: "المدونة",
+    path: "/blog",
+  },
+  {
     enTitle: "contact us",
     arTitle: "تواصل معنا",
-    path: "/contact",
+    path: "/contact/form",
   },
 ];
 export const partners = [part6, part5, part4, part3, part2, part1];

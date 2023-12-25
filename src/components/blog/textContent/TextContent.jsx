@@ -3,6 +3,8 @@ import style from "./text.module.css";
 import { useTranslation } from "react-i18next";
 const TextContent = ({ data }) => {
   const { i18n } = useTranslation();
+  // console.log("this is the data from blog page", data);
+  // console.log("this is the data from blog page id", data.id);
   return (
     <div className={`pb-3 ${style.main}`}>
       <p className="m-0 p-0 title mb-3 mt-3">{data.title}</p>

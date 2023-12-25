@@ -53,28 +53,24 @@ const App = () => {
   }, []);
 
   // handle scroll to top after change page
-  function ScrollToTopAfterChangePage() {
-    const { pathname } = useLocation();
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, [pathname]);
-    return null;
-  }
+  // function ScrollToTopAfterChangePage() {
+  //   const { pathname } = useLocation();
+  //   useEffect(() => {
+  //     window.scrollTo(0, 0);
+  //   }, [pathname]);
+  //   return null;
+  // }
   // fetch main page and general data
   const fetchData = () => {
     return request({ url: "/settings" });
   };
-  const { isLoading, data } = useQuery("settings", fetchData, {
-    cacheTime: 80000,
-    staleTime: 80000,
-  });
+  const { isLoading, data } = useQuery("settings", fetchData);
   return (
     <>
       {isLoading ? (
         <Spinner />
       ) : (
         <Router>
-          <ScrollToTopAfterChangePage />
           <Navbar logo={data.data.data.images.logo} links={navLinks} />
           <Meta
             title={data.data.data.SEO.title}
@@ -82,7 +78,7 @@ const App = () => {
           />
           <Routes>
             <Route
-              path="/"
+              path="/:slug?"
               element={
                 <Home
                   hero={data.data.data.header}
@@ -93,13 +89,18 @@ const App = () => {
                   about={data.data.data.aboutUs}
                   feat={data.data.data.features}
                   rev={data.data.data.reviews}
+                  title={data.data.data.search.title}
+                  desc={data.data.data.search.Meta}
+                  redirect={data.data.data.search.CustomUrl}
+                  slug={data.data.data.search.Slug}
+                  canonical={data.data.data.search.Canonical}
                 />
               }
             />
           </Routes>
           <Routes>
             <Route
-              path="/about"
+              path="/about/:slug?"
               element={
                 <About
                   about={data.data.data.aboutUs}
@@ -110,37 +111,68 @@ const App = () => {
           </Routes>
           <Routes>
             <Route
-              path="/serv"
-              element={<Serv services={data.data.data.services} />}
+              path="/serv/:slug?"
+              element={
+                <Serv
+                  services={data.data.data.services}
+                  title={data.data.data.searchServices.title}
+                  desc={data.data.data.searchServices.Meta}
+                  redirect={data.data.data.searchServices.CustomUrl}
+                  slug={data?.data?.data?.searchServices?.Slug}
+                  canonical={data.data.data.searchServices.Canonical}
+                />
+              }
             />
           </Routes>
           <Routes>
             <Route
-              path="/contact"
+              path="/contact/form"
               element={<Contact social={data.data.data.socialMedia} />}
             />
           </Routes>
           <Routes>
-            <Route path="/req" element={<Req />} />
+            <Route path="/req/form" element={<Req />} />
           </Routes>
           <Routes>
-            <Route path="/thanks" element={<Thanks />} />
-          </Routes>
-          <Routes>
-            <Route path="/blog" element={<Blogs data={blogs} />} />
-          </Routes>
-          <Routes>
-            <Route path="/blog/:id" element={<Blog data={blogs} />} />
+            <Route path="/thanks/form" element={<Thanks />} />
           </Routes>
           <Routes>
             <Route
-              path="/real"
-              element={<Real portfolio={portfolio} filters={filters} />}
+              path="/blog/:slug?"
+              element={
+                <Blogs
+                  title={data.data.data.searchBlog.title}
+                  desc={data.data.data.searchBlog.Meta}
+                  redirect={data.data.data.searchBlog.CustomUrl}
+                  slug={data.data.data.searchBlog.Slug}
+                  canonical={data.data.data.searchBlog.Canonical}
+                  data={blogs}
+                />
+              }
+            />
+          </Routes>
+          <Routes>
+            <Route path="/blog/:id/:slug" element={<Blog data={blogs} />} />
+          </Routes>
+          <Routes>
+            <Route
+              path="/real/:slug"
+              element={
+                <Real
+                  portfolio={portfolio}
+                  filters={filters}
+                  title={data.data.data.searchRealEstate.title}
+                  desc={data.data.data.searchRealEstate.Meta}
+                  redirect={data.data.data.searchRealEstate.CustomUrl}
+                  slug={data.data.data.searchRealEstate.Slug}
+                  canonical={data.data.data.searchRealEstate.Canonical}
+                />
+              }
             />
           </Routes>
           <Routes>
             <Route
-              path="/real/:id"
+              path="/real/:id/:slug?"
               element={<RealDetails portfolio={portfolio} />}
             />
           </Routes>

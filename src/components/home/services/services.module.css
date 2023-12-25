@@ -32,6 +32,7 @@
 @media screen and (max-width: 767px) {
   .number {
     font-size: 65px;
+    bottom: 25px;
   }
 }
 .cardTitle {

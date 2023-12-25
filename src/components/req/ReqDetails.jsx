@@ -43,7 +43,7 @@ const ReqDetails = () => {
         setBank("");
         setCommitments("");
         setAgree(false);
-        navigate("/thanks");
+        navigate("/thanks/form");
       }
     },
     onError: () => {

@@ -25,4 +25,5 @@
 .mainImg {
   width: 200px;
   height: 240px;
+  object-fit: cover;
 }

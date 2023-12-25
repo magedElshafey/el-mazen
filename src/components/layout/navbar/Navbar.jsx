@@ -24,7 +24,7 @@ const Navbar = ({ links, logo }) => {
   const navigate = useNavigate();
   const handleNavigate = () => {
     setActiveId(null);
-    navigate("/req");
+    navigate("/req/form");
     setShowSidebar(false);
   };
   const [activeId, setActiveId] = useState(0);
@@ -32,7 +32,9 @@ const Navbar = ({ links, logo }) => {
     <>
       <div className={style.navContainer}>
         <div className="container d-flex justify-content-between align-items-center">
-          <img alt="logo/img" className={style.logo} src={logo} />
+          <Link to="/">
+            <img alt="logo/img" className={style.logo} src={logo} />
+          </Link>
           <ul className="d-none d-md-flex align-items-center gap-5 p-0 m-0 ">
             {links.map((item, index) => (
               <NavLink
@@ -108,7 +110,9 @@ const Navbar = ({ links, logo }) => {
       >
         <div className="p-3">
           <div className="d-flex justify-content-between align-items-center mb-5">
-            <img alt="logo/img" className={style.mobLogo} src={logo} />
+            <Link to="/">
+              <img alt="logo/img" className={style.mobLogo} src={logo} />
+            </Link>
             <IoClose
               size={30}
               className={`pointer ${style.close}`}
