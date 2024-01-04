@@ -3,7 +3,7 @@ import style from "./hero.module.css";
 import { useNavigate } from "react-router-dom";
 const Hero = ({ data }) => {
   const navigate = useNavigate();
-  const handleNavigate = () => navigate("/req");
+  const handleNavigate = () => navigate("/req/form");
   return (
     <div className={style.mainDiv}>
       <div className={style.imgContainer}>

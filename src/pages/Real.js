@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
 import { request } from "../utils/axios.js";
-const Real = ({ filters, title, desc, canonical }) => {
+const Real = ({ filters }) => {
   const fetchSlugs = () => {
     return request({ url: "/settings" });
   };
@@ -86,21 +86,28 @@ const Real = ({ filters, title, desc, canonical }) => {
   useEffect(() => {
     fetchData();
   }, []);
-  useEffect(() => {
-    const currentSlug = window.location.pathname.split("/").pop();
-    if (!loading && loadingSlugs && data.data.data.searchRealEstate.Slug) {
-      if (currentSlug !== data.data.data.searchRealEstate.Slug) {
-        navigate(`/real/${data.data.data.searchRealEstate.Slug}`);
-      }
-    }
-  }, [data.data.data.searchRealEstate.Slug, navigate, loading, loadingSlugs]);
+  // useEffect(() => {
+  //   const currentSlug = window.location.pathname.split("/").pop();
+  //   if (!loading && !loadingSlugs) {
+  //     if (dataSlugs?.data?.search?.Slug) {
+  //       if (currentSlug !== dataSlugs?.data?.search?.Slug) {
+  //         navigate(`/real/port/${dataSlugs?.data?.search?.Slug}`);
+  //       }
+  //     }
+  //   }
+  // }, [dataSlugs?.data?.search?.Slug, navigate, loading, loadingSlugs]);
+
   return (
     <>
       {loading || loadingSlugs ? (
         <Spinner />
       ) : (
         <>
-          <Meta title={title} desc={desc} canonical={canonical} />
+          <Meta
+            title={data?.data?.search?.title}
+            desc={data?.data?.search?.Meta}
+            canonical={data?.data?.search?.Canonical}
+          />
           <div className="container mt-5 pt-5">
             <p className="m-0 p-0 mb-3 title">{t("navPort")}</p>
             <div className="filterContainer mb-5 d-flex align-items-center">

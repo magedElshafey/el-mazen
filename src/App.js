@@ -78,22 +78,22 @@ const App = () => {
           />
           <Routes>
             <Route
-              path="/:slug?"
+              path="/"
               element={
                 <Home
-                  hero={data.data.data.header}
-                  partners={data.data.data.partners}
-                  portfolio={data.data.data.realState}
-                  stats={data.data.data.statistics}
-                  services={data.data.data.services}
-                  about={data.data.data.aboutUs}
-                  feat={data.data.data.features}
-                  rev={data.data.data.reviews}
-                  title={data.data.data.search.title}
-                  desc={data.data.data.search.Meta}
-                  redirect={data.data.data.search.CustomUrl}
-                  slug={data.data.data.search.Slug}
-                  canonical={data.data.data.search.Canonical}
+                  hero={data?.data?.data?.header}
+                  partners={data?.data?.data?.partners}
+                  portfolio={data?.data?.data?.realState}
+                  stats={data?.data?.data?.statistics}
+                  services={data?.data?.data?.services}
+                  about={data?.data?.data?.aboutUs}
+                  feat={data?.data?.data?.features}
+                  rev={data?.data?.data?.reviews}
+                  title={data?.data?.data?.search?.title}
+                  desc={data?.data?.data?.search?.Meta}
+                  redirect={data?.data?.data?.search?.CustomUrl}
+                  slug={data?.data?.data?.search?.Slug}
+                  canonical={data?.data?.data?.search?.Canonical}
                 />
               }
             />
@@ -103,8 +103,8 @@ const App = () => {
               path="/about/:slug?"
               element={
                 <About
-                  about={data.data.data.aboutUs}
-                  services={data.data.data.services}
+                  about={data?.data?.data?.aboutUs}
+                  services={data?.data?.data?.services}
                 />
               }
             />
@@ -138,34 +138,30 @@ const App = () => {
           </Routes>
           <Routes>
             <Route
-              path="/blog/:slug?"
+              path="/blog"
               element={
                 <Blogs
-                  title={data.data.data.searchBlog.title}
-                  desc={data.data.data.searchBlog.Meta}
-                  redirect={data.data.data.searchBlog.CustomUrl}
-                  slug={data.data.data.searchBlog.Slug}
-                  canonical={data.data.data.searchBlog.Canonical}
+                  title={data?.data?.data?.searchBlog?.title}
+                  desc={data?.data?.data?.searchBlog?.Meta}
+                  redirect={data?.data?.data?.searchBlog?.CustomUrl}
+                  slug={data?.data?.data?.searchBlog?.Slug}
+                  canonical={data?.data?.data?.searchBlog?.Canonical}
                   data={blogs}
                 />
               }
             />
           </Routes>
           <Routes>
-            <Route path="/blog/:id/:slug" element={<Blog data={blogs} />} />
+            <Route path="/blog/:id/:slug?" element={<Blog data={blogs} />} />
           </Routes>
           <Routes>
             <Route
-              path="/real/:slug"
+              path="/real"
               element={
                 <Real
                   portfolio={portfolio}
                   filters={filters}
-                  title={data.data.data.searchRealEstate.title}
                   desc={data.data.data.searchRealEstate.Meta}
-                  redirect={data.data.data.searchRealEstate.CustomUrl}
-                  slug={data.data.data.searchRealEstate.Slug}
-                  canonical={data.data.data.searchRealEstate.Canonical}
                 />
               }
             />

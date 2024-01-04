@@ -19,6 +19,13 @@ const ReqDetails = () => {
   const [commitments, setCommitments] = useState("");
   const [duration, setDuration] = useState("");
   const [agree, setAgree] = useState(false);
+  const handleNameChange = (event) => {
+    const userInput = event.target.value;
+    const onlyTextRegex = /^[A-Za-z\s]+$/;
+    if (onlyTextRegex.test(userInput) || userInput === "") {
+      setName(userInput);
+    }
+  };
   const handlePhoneNumberChange = (
     isValid,
     value,
@@ -26,7 +33,8 @@ const ReqDetails = () => {
     fullNumber,
     extension
   ) => {
-    setPhone(value);
+    const numericValue = value.replace(/\D/g, "");
+    setPhone(numericValue);
   };
   const handleSendMsg = (data) => {
     return request({ url: "/financeRequest", method: "post", data });
@@ -115,8 +123,9 @@ const ReqDetails = () => {
                           className="inp"
                           placeholder={t("name")}
                           type="text"
+                          onChange={handleNameChange}
+                          value={name}
                           id="name"
-                          onChange={(e) => setName(e.target.value)}
                         />
                       </div>
                     </div>
@@ -134,6 +143,7 @@ const ReqDetails = () => {
                           placeholder=""
                           defaultCountry="sa"
                           onPhoneNumberChange={handlePhoneNumberChange}
+                          value={phone}
                         />
                       </div>
                     </div>

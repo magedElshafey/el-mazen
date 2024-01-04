@@ -38,14 +38,14 @@ const Home = ({
   //     }
   //   }
   // }, [navigate, slug]);
-  useEffect(() => {
-    const currentSlug = window.location.pathname.split("/").pop();
-    if (slug) {
-      if (currentSlug !== slug) {
-        navigate(`/${slug}`);
-      }
-    }
-  }, [slug, navigate]);
+  // useEffect(() => {
+  //   const currentSlug = window.location.pathname.split("/").pop();
+  //   if (slug) {
+  //     if (currentSlug !== slug) {
+  //       navigate(`/${slug}`);
+  //     }
+  //   }
+  // }, [slug, navigate]);
   return (
     <div className="mt-5 pt-4">
       <Meta title={title} desc={desc} canonical={canonical} />

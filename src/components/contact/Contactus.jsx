@@ -13,6 +13,13 @@ const Contactus = ({ social }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const handleNameChange = (event) => {
+    const userInput = event.target.value;
+    const onlyTextRegex = /^[A-Za-z\s]+$/;
+    if (onlyTextRegex.test(userInput) || userInput === "") {
+      setName(userInput);
+    }
+  };
   const handlePhoneNumberChange = (
     isValid,
     value,
@@ -20,7 +27,8 @@ const Contactus = ({ social }) => {
     fullNumber,
     extension
   ) => {
-    setPhone(value);
+    const numericValue = value.replace(/\D/g, "");
+    setPhone(numericValue);
   };
   const [message, setMessage] = useState("");
   const handleSendMsg = (data) => {
@@ -84,8 +92,8 @@ const Contactus = ({ social }) => {
                     placeholder={t("name")}
                     type="text"
                     id="name"
+                    onChange={handleNameChange}
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
               </div>
@@ -155,6 +163,7 @@ const Contactus = ({ social }) => {
                     placeholder=""
                     defaultCountry="sa"
                     onPhoneNumberChange={handlePhoneNumberChange}
+                    value={phone}
                   />
                   <svg
                     className={`inputSvg ${

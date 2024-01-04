@@ -35,14 +35,14 @@ const Blogs = ({ title, desc, canonical, slug }) => {
 </svg>`;
   const { t, i18n } = useTranslation();
 
-  useEffect(() => {
-    const currentSlug = window.location.pathname.split("/").pop();
-    if (isLoading && slug) {
-      if (currentSlug !== slug) {
-        navigate(`/blog/${slug}`);
-      }
-    }
-  }, [navigate, slug, isLoading]);
+  // useEffect(() => {
+  //   const currentSlug = window.location.pathname.split("/").pop();
+  //   if (isLoading && slug) {
+  //     if (currentSlug !== slug) {
+  //       navigate(`/blog/${slug}`);
+  //     }
+  //   }
+  // }, [navigate, slug, isLoading]);
   return (
     <>
       {isLoading ? (
@@ -59,33 +59,35 @@ const Blogs = ({ title, desc, canonical, slug }) => {
                   <BlogCard key={index} item={item} />
                 ))}
             </div>
-            <div className="d-flex justify-content-center">
-              <ReactPaginate
-                previousLabel={
-                  i18n.language === "en" ? (
-                    <div dangerouslySetInnerHTML={{ __html: prevBtn }} />
-                  ) : (
-                    <div dangerouslySetInnerHTML={{ __html: nextBtn }} />
-                  )
-                }
-                nextLabel={
-                  i18n.language === "en" ? (
-                    <div dangerouslySetInnerHTML={{ __html: nextBtn }} />
-                  ) : (
-                    <div dangerouslySetInnerHTML={{ __html: prevBtn }} />
-                  )
-                }
-                pageCount={pageCount}
-                onPageChange={changePage}
-                containerClassName={"paginationBttns"}
-                previousLinkClassName={"previousBttn"}
-                nextLinkClassName={"nextBttn"}
-                disabledClassName={"paginationDisabled"}
-                activeClassName={"paginationActive"}
-                breakLabel="..."
-                onClick={handleFilterClick}
-              />
-            </div>
+            {data?.data?.data?.length >= 4 && (
+              <div className="d-flex justify-content-center">
+                <ReactPaginate
+                  previousLabel={
+                    i18n.language === "en" ? (
+                      <div dangerouslySetInnerHTML={{ __html: prevBtn }} />
+                    ) : (
+                      <div dangerouslySetInnerHTML={{ __html: nextBtn }} />
+                    )
+                  }
+                  nextLabel={
+                    i18n.language === "en" ? (
+                      <div dangerouslySetInnerHTML={{ __html: nextBtn }} />
+                    ) : (
+                      <div dangerouslySetInnerHTML={{ __html: prevBtn }} />
+                    )
+                  }
+                  pageCount={pageCount}
+                  onPageChange={changePage}
+                  containerClassName={"paginationBttns"}
+                  previousLinkClassName={"previousBttn"}
+                  nextLinkClassName={"nextBttn"}
+                  disabledClassName={"paginationDisabled"}
+                  activeClassName={"paginationActive"}
+                  breakLabel="..."
+                  onClick={handleFilterClick}
+                />
+              </div>
+            )}
           </div>
         </>
       )}
